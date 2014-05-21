@@ -177,6 +177,8 @@
         "src/js/WinJS/Controls/Flyout.js",
         "src/js/WinJS/Controls/Menu.js",
         "src/js/WinJS/Controls/Menu/_Command.js",
+        "src/js/WinJS/Controls/Pivot.js",
+        "src/js/WinJS/Controls/Pivot/_Item.js",
         "src/js/WinJS/Controls/SearchBox.js",
         "src/js/WinJS/Controls/Flyout/_SettingsFlyout.js",
         "src/js/WinJS/Controls/ItemContainer.js",
