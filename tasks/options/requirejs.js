@@ -3,7 +3,6 @@
     "use strict";
 
     var config = require("../../config.js");
-    var analysis = require('rjs-build-analysis');
 
     module.exports = {
         base: {
