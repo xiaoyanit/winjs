@@ -3,5 +3,11 @@ define(['WinJS/Core', 'WinJS/Promise', 'WinJS/Scheduler', 'WinJS/Utilities',
     'WinJS/Binding', 'WinJS/BindingTemplate', 'WinJS/BindingList', 'WinJS/Res',
     'WinJS/Pages', 'WinJS/ControlProcessor', 'WinJS/Controls/HtmlControl'], function() {
 
-    //return WinJS
+
+    WinJS.Namespace.define("WinJS.Utilities", {
+        _require: require,
+        _define: define
+    });
+
+    return WinJS;
 });

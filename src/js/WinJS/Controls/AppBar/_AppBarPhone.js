@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All Rights Reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 // AppBar
 /// <dictionary>appbar,appBars,Flyout,Flyouts,iframe,Statics,unfocus,WinJS</dictionary>
+define(['./_CommandPhone', './_Icon'], function() {
 (function appBarInit(WinJS) {
     "use strict";
 
@@ -839,3 +840,4 @@
     });
 
 })(WinJS);
+});

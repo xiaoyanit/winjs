@@ -3,6 +3,7 @@
     "use strict";
 
     var config = require("../../config.js");
+    var analysis = require('rjs-build-analysis');
 
     module.exports = {
         base: {
@@ -12,10 +13,52 @@
                 useStrict: true,
                 name: '../../node_modules/almond/almond',
                 include: ['base'],
-                out: config.desktopOutput + "js/base-amd.js",
+                out: config.desktopOutput + "js/base.js",
                 wrap: {
-                    startFile: 'src/js/build/amd.start.base.js',
-                    endFile: 'src/js/build/amd.end.base.js'
+                    startFile: 'src/js/build/startBase.js',
+                    endFile: 'src/js/build/endBase.js'
+                }
+            }
+        },
+        basePhone: {
+            options: { 
+                baseUrl: './src/js/',
+                optimize: 'none', // uglify2
+                useStrict: true,
+                name: '../../node_modules/almond/almond',
+                include: ['base', 'WinJS/Core/_BaseUtilsPhone'],
+                out: config.phoneOutput + "js/base.js",
+                wrap: {
+                    startFile: 'src/js/build/startBase.js',
+                    endFile: 'src/js/build/endBase.js'
+                }
+            }
+        },
+        ui: {
+            options: { 
+                baseUrl: './src/js/',
+                optimize: 'none', // uglify2
+                useStrict: true,
+                name: 'ui',
+                exclude: [],
+                out: config.desktopOutput + "js/ui.js",
+                wrap: {
+                    startFile: 'src/js/build/startUI.js',
+                    endFile: 'src/js/build/endUI.js'
+                }
+            }
+        },
+        uiPhone: {
+            options: { 
+                baseUrl: './src/js/',
+                optimize: 'none', // uglify2
+                useStrict: true,
+                name: 'ui-phone',
+                exclude: [],
+                out: config.phoneOutput + "js/ui.js",
+                wrap: {
+                    startFile: 'src/js/build/startUI.js',
+                    endFile: 'src/js/build/endUI.js'
                 }
             }
         }
